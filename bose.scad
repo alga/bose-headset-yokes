@@ -53,7 +53,7 @@ module yoke() {
             //rotate([0, 0, 0]) scale([1.10, 0.76, 1]) cylinder(r1=58, r2=53, h=10, $fn=200);
             
             // Donut
-            scale([1.1, 0.76, 1]) rotate_extrude($fn=100) translate([48, 0])circle(r=10);
+            scale([1.11, 0.76, 1]) rotate_extrude($fn=100) translate([48, 0])circle(r=10);
             
             // Screw bosses
             translate([0, 38, 0]) rotate([-90, 0, 0]) cylinder(r=5.5, h=6, $fn=20);
@@ -65,7 +65,7 @@ module yoke() {
         
         // Inner ellipsoid
         rotate([0, 0, 0]) translate([0, 0, -25]) 
-            scale([1.06, 0.76, 1]) cylinder(r=50, h=50, $fn=60);
+            scale([1.07, 0.76, 1]) cylinder(r=50, h=50, $fn=60);
         translate([0, -42, 0]) rotate([-90, 0, 0]) cylinder(r=2.2, h=84, $fn=20);
 
         // Screw holes
@@ -85,9 +85,9 @@ module yoke() {
       intersection () {
           difference() {
             rotate([0, 0, 4]) translate([0, 0, -4.1]) 
-                scale([1.06, 0.76, 1]) cylinder(r=57, h=4, $fn=60);
+                scale([1.07, 0.76, 1]) cylinder(r=57, h=4, $fn=60);
             rotate([0, 0, 4]) translate([0, 0, -25]) 
-                scale([1.06, 0.76, 1]) cylinder(r=53, h=50, $fn=60);
+                scale([1.07, 0.76, 1]) cylinder(r=53, h=50, $fn=60);
           }
           translate([5, -96, -6]) cube([100, 100, 10]);
       }
@@ -111,6 +111,6 @@ module yoke_r() {
     translate([59, -17, 5]) rotate([0, 0, -16-90]) 
         linear_extrude(height=0.5) text("R", size=4.5, font="DejaVu Sans:style=Bold", halign="center", valign="center");
 }
-//%ausine();
+%ausine();
 yoke_r();
 //block();
